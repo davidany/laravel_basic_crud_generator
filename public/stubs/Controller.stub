@@ -1,0 +1,55 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\{{ModelClassName}};
+
+class {{ControllerName}} extends Controller
+{
+
+    public function index()
+    {
+
+    	// get all the {{ModelClassName}}
+        ${{ControllerVariableName}} = {{ModelClassName}}::all();
+        // load the view and pass the {{ControllerCompactName}}
+    	 return view('{{ViewFolderName}}.index', compact('{{ControllerCompactName}}'));
+
+    }
+
+    public function create()
+    {
+        // load the create form (app/views/{{ViewFolderName}}/create.blade.php)
+        return view('{{ViewFolderName}}.create');
+    }
+
+    public function store(Request $request)
+    {
+        {{ModelClassName}}::create($request->all());
+	    return redirect()->route('{{ViewFolderName}}.index');
+    }
+
+
+    public function show($id)
+    {
+         ${{ControllerVariableName}} = {{ModelClassName}}::findOrFail($id);
+    	 return view('{{ViewFolderName}}.show', compact('{{ControllerCompactName}}'));
+
+    }
+
+    public function update(Request $request, $id)
+    {
+        ${{ControllerVariableName}} = {{ModelClassName}}::findOrFail($id);
+        ${{ControllerVariableName}}->fill($request->all());
+        ${{ControllerVariableName}}->save();
+        return view('{{ViewFolderName}}.index');
+
+    }
+
+    public function destroy($id)
+    {
+        {{ModelClassName}}::destroy($id);
+		return view('{{ViewFolderName}}.index');
+    }
+}

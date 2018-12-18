@@ -1,0 +1,24 @@
+{
+  "name": "Davidany/CrudGen",
+  "require": {
+    "filp/whoops": "^2.1",
+    "vlucas/phpdotenv": "^2.4",
+    "nesbot/carbon": "^1.36",
+    "sebastiaanluca/php-stub-generator": "^0.1.1"
+  },
+  "authors": [
+    {
+      "name": "david abraham",
+      "email": "dave@springbasemedia.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "lib/config.php",
+      "lib/functions.php"
+    ],
+    "classmap": [
+      "classes"
+    ]
+  }
+}

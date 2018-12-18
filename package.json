@@ -1,0 +1,29 @@
+{
+  "name": "dgen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidany/crudgen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidany/crudgen/issues"
+  },
+  "homepage": "https://github.com/davidany/crudgen#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "webpack": "^4.27.1"
+  }
+}
