@@ -20,6 +20,20 @@ function get($var)
 		return null;
 	}
 }
+function send_to($direction)
+{
+	if (!headers_sent()) {
+		header('Location: ' . $direction);
+		exit;
+	} else {
+		print '<script type="text/javascript">';
+	}
+	print 'window.location.href="' . $direction . '";';
+	print '</script>';
+	print '<noscript>';
+	print '<meta http-equiv="refresh" content="0;url=' . $direction . '" />';
+	print '</noscript>';
+}
 
 
 function print_x($value)
